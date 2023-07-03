@@ -1,0 +1,42 @@
+@use '../../assets/colors' as *;
+
+section {
+    background-color: $Light-Grayish-Blue;
+    padding:4rem 0;
+    .top-content {
+        padding-bottom: 3rem;
+        h2 {
+            color:$Dark-Blue;
+            margin-bottom:1.5rem;
+            font-weight:500;
+            font-size:2rem;
+        }
+        p {
+            color:$Grayish-Blue;
+            width: 400px;
+        }
+    }
+    .boxes {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-column-gap: 10px;
+        @media(min-width:992px) {
+            grid-template-columns: repeat(4, minmax(200px, 1fr));
+        }
+        .box {
+            margin-bottom:1rem;
+            img.icon {
+                width: 50px;
+            }
+            h3 {
+                color:$Dark-Blue;
+                margin:1rem 0;
+                font-weight:500;
+                font-size:1.5rem;
+            }
+            p {
+                color:$Grayish-Blue;
+            }
+        }
+    }
+}

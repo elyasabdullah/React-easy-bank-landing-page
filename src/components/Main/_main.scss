@@ -1,0 +1,90 @@
+@use '../../assets/colors' as *;
+
+.main {
+    background-color: $Very-Light-Gray;
+    @media(max-width:768px) {
+        padding-bottom:3.5rem ;
+    }
+    .main-content {
+        display:grid;
+        grid-template-columns:45% 55%;
+        grid-template-rows: repeat(12, 45px);
+        column-gap:5%;
+        @media (max-width:768px) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(12, 70px);
+        }
+        .main-texts {
+            grid-row-start:4;
+            grid-row-end: 10;
+            @media(max-width:992px) {
+                grid-row-start: 3;
+                grid-row-end: 11;
+            }
+            @media(max-width:768px) {
+                grid-row-start:9;
+                grid-row-end:13;
+                grid-column-start:1;
+                text-align:center;
+                align-items:center;
+                justify-content: space-between;
+            }
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+            justify-content: space-evenly;
+            h1 {
+                color:$Dark-Blue;
+                font-size: 3rem;
+                font-weight: 400;
+            }
+            p {
+                color:$Dark-Blue;
+                opacity:0.8;
+                margin: 1rem 0;
+            }
+        }
+        .main-imgs {
+            grid-column-start:2;
+            position: relative;
+            img {
+                position:absolute;
+                left:0;
+                top:0;
+                overflow: hidden;
+            }
+            img.one {
+                z-index: 1;
+                top: -170px;
+                width: 85vw;
+                height: 770px;
+                left: -60px;
+            }
+            img.two {
+                z-index: 2;
+                top: -75px;
+                left: 110px;
+                width: 650px;
+                height: 730px;
+            }
+            @media(max-width:768px) {
+                grid-row-start:1;
+                grid-row-end:6;
+                grid-column-start: 1;
+                
+                img.one {
+                    width: 865px;
+                    height: 825px;
+                    top: -330px;
+                    left: -155px;
+                }
+                img.two {
+                    width: 450px;
+                    height: 450px;
+                    top: 85px;
+                    left: 5px
+                }
+            }
+        }
+    }
+}

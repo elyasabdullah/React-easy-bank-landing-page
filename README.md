@@ -1,1 +1,0 @@
-# React-easy-bank-landing-page

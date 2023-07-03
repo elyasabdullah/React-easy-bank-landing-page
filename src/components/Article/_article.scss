@@ -1,0 +1,53 @@
+@use '../../assets/colors' as *;
+
+.article {
+    background-color: $Very-Light-Gray;
+    padding:4rem 0;
+    h2 {
+        color:$Dark-Blue;
+        margin-bottom:3rem;
+        font-size:2rem;
+    }
+    .cards {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap:1.5rem;
+        @media(min-width:1140px) {
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+        }
+        .card {
+            border-radius: 5px;
+            width:250px;
+            background-color: $White;
+            padding-bottom:1rem;
+            p, h4 {
+                padding-left:1rem;
+                padding-right:1rem;
+            }
+            img {
+                width:100%;
+                height:190px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                margin-bottom: 0.8rem;
+            }
+            p.author {
+                color:$Grayish-Blue;
+            }
+            h4 {
+                color:$Dark-Blue;
+                margin:0.8rem 0;
+                font-size:1.1rem;
+                opacity:0.9;
+                cursor: pointer;
+            }
+            h4:hover {
+                color:$Lime-Green;
+            }
+            p.text {
+                color:$Grayish-Blue;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,37 @@
+@use './assets/colors' as *;
+@use './components/Header/header' as *;
+@use './components/Main/main' as *;
+@use './components/Section/section' as *;
+@use './components/Article/article' as *;
+@use './components/Footer/footer' as *;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+    overflow-x: hidden;
+}
+* {
+    padding:0;
+    margin:0;
+    list-style: none;
+    transition: 0.5s ease;
+    line-height:1.5;
+}
+.container {
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+}
+button.requestInvite {
+    border:none;
+    border-radius:1.6rem;
+    color:$White;
+    background-image: linear-gradient(to left, $Bright-Cyan 0%, $Lime-Green 100%);
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    width: 160px;
+    font-size: 17px;
+}
+button.requestInvite:hover {
+    opacity:0.8
+}
