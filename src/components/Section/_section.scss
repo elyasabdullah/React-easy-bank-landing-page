@@ -10,10 +10,16 @@ section {
             margin-bottom:1.5rem;
             font-weight:500;
             font-size:2rem;
+            @media(max-width:575px) {
+                font-size:1.5rem;
+            }
         }
         p {
             color:$Grayish-Blue;
             width: 400px;
+            @media(max-width:575px) {
+                width:auto;
+            }
         }
     }
     .boxes {

@@ -86,7 +86,7 @@ header .content img.logo {
     position: absolute;
     top: 56px;
     left: 0;
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.395);
     z-index: 200;
@@ -340,10 +340,25 @@ header .content img.logo {
             justify-content: space-between;
   }
 }
+@media (max-width: 575px) {
+  .main .main-content .main-texts {
+    -ms-grid-row: 9;
+        grid-row-start: 9;
+    -ms-grid-row-span: 4;
+    grid-row-end: 13;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+}
 .main .main-content .main-texts h1 {
   color: hsl(233deg, 26%, 24%);
   font-size: 3rem;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .main .main-content .main-texts h1 {
+    font-size: 2rem;
+  }
 }
 .main .main-content .main-texts p {
   color: hsl(233deg, 26%, 24%);
@@ -411,9 +426,19 @@ section .top-content h2 {
   font-weight: 500;
   font-size: 2rem;
 }
+@media (max-width: 575px) {
+  section .top-content h2 {
+    font-size: 1.5rem;
+  }
+}
 section .top-content p {
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(235.38deg, 8.71%, 23.05%);
   width: 400px;
+}
+@media (max-width: 575px) {
+  section .top-content p {
+    width: auto;
+  }
 }
 section .boxes {
   display: -ms-grid;
@@ -440,7 +465,7 @@ section .boxes .box h3 {
   font-size: 1.5rem;
 }
 section .boxes .box p {
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(235.38deg, 8.71%, 23.05%);
 }
 
 .article {
@@ -466,7 +491,6 @@ section .boxes .box p {
 }
 .article .cards .card {
   border-radius: 5px;
-  width: 250px;
   background-color: hsl(0deg, 0%, 100%);
   padding-bottom: 1rem;
 }
@@ -482,7 +506,7 @@ section .boxes .box p {
   margin-bottom: 0.8rem;
 }
 .article .cards .card p.author {
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(235.38deg, 8.71%, 23.05%);
 }
 .article .cards .card h4 {
   color: hsl(233deg, 26%, 24%);
@@ -495,7 +519,7 @@ section .boxes .box p {
   color: hsl(136deg, 65%, 51%);
 }
 .article .cards .card p.text {
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(235.38deg, 8.71%, 23.05%);
 }
 
 footer {
@@ -656,6 +680,8 @@ body {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   line-height: 1.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container {
@@ -663,6 +689,12 @@ body {
   padding-right: 2.5rem;
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 button.requestInvite {
   border: none;
   border-radius: 1.6rem;

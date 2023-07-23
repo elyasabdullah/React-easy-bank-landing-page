@@ -29,6 +29,11 @@
                 align-items:center;
                 justify-content: space-between;
             }
+            @media(max-width:575px) {
+                grid-row-start:9;
+                grid-row-end:13;
+                grid-column-start:1;
+            }
             display: flex;
             flex-direction: column;
             column-gap: 2rem;
@@ -37,6 +42,9 @@
                 color:$Dark-Blue;
                 font-size: 3rem;
                 font-weight: 400;
+                @media(max-width:575px) {
+                    font-size:2rem;
+                }
             }
             p {
                 color:$Dark-Blue;
